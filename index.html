@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proba</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/color-picker.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">    
+  </head>
+  <body>
+      <div class="page-wrapper">
+        <div class="description">
+            <h1>The CanvasRenderingContext2D.globalCompositeOperation property of the Canvas 2D API</h1>
+            <p> Try globalCompositeOperation with different types and backround color and over color. You can read about this property more 
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation" target="_blank">
+                here
+            </a>
+            </p>
+        </div>
+          <div class="content-wrap">  
+            <div class="canvas-wrap">
+                <canvas id="show-canvas"></canvas>
+            </div>
+            <div class="options-wrap">
+                <div class="option-row">
+                   <div class="option-title">Select mode</div> 
+                   <select id="select-mode"></select>
+                </div>            
+                <div class="option-row"> 
+                    <div class="option-title">Select background colour</div>
+                    <div class="color-box-section">
+                        <div class="color-box-wrap">
+                            <div class="color-box-title" id="back-first-title"></div>
+                            <div class="color-box" id="back-first-color"></div>
+                        </div>
+                        <div class="color-box-wrap hidden-blc" id="back-second-color-wrap">
+                            <div class="color-box-title">Second color</div>
+                            <div class="color-box" id="back-second-color"></div>
+                        </div>                 
+                    </div>
+                    <div class="option-toggle-wrap">
+                        <label>Solid colour<input type="radio" name="background-mode" value="solid"></label>
+                        <label>Half painted<input type="radio" name="background-mode" value="half"></label>
+                        <label>Linear gradient<input type="radio" name="background-mode" value="gradient"></label>
+                    </div>
+                </div>
+                <div class="option-row"> 
+                    <div class="option-title">Select over colour</div>
+                    <div class="color-box-section">
+                        <div class="color-box-wrap">
+                            <div class="color-box-title" id="over-first-title"></div>
+                            <div class="color-box" id="over-first-color"></div>
+                        </div>
+                        <div class="color-box-wrap hidden-blc" id="over-second-color-wrap">
+                            <div class="color-box-title">Second color</div>
+                            <div class="color-box" id="over-second-color"></div>
+                        </div>                 
+                    </div>
+                    <div class="option-toggle-wrap">
+                        <label>Solid colour<input type="radio" name="over-mode" value="solid"></label>
+                        <label>Half painted<input type="radio" name="over-mode" value="half"></label>
+                        <label>Linear gradient<input type="radio" name="over-mode" value="gradient"></label>
+                    </div>
+                </div>
+                <div class="option-row">
+                    <button type="button" id="btn-draw" class="btn-draw">Draw</button>
+                </div>
+             </div>            
+            </div><!--content-wrap-->     
+                
+              <div class="picker-block">
+                  <div class="ui-color-picker" data-topic="picker" data-mode="HSL"></div>            
+              </div>
+        
+      </div>
+      <script src="js/color-picker.js"></script>
+      <script src="js/app.js"></script>
+      <script>
+            window.addEventListener( "load", function() {
+                App.init();        
+            });
+      </script>
+  </body>  
+</html>
